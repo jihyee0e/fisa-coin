@@ -65,14 +65,14 @@ def update_readme(price_info):
     
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     readme_content = f"""
-# Crypto Price Status
-이 리포지토리는 ccdata.io API를 사용하여 비트코인(BTC)의 가격 정보를 자동으로 업데이트합니다.
-## 현재 비트코인 가격
-> {crypto_info}
-:모래가_내려오고_있는_모래시계: 업데이트 시간: {now} (UTC)
----
-자동 업데이트 봇에 의해 관리됩니다.
-"""
+    # Crypto Price Status
+    이 리포지토리는 ccdata.io API를 사용하여 비트코인(BTC)의 가격 정보를 자동으로 업데이트합니다.
+    ## 현재 비트코인 가격
+    > {crypto_info}
+    ⏳ 업데이트 시간: {now} (UTC)
+    ---
+    자동 업데이트 봇에 의해 관리됩니다.
+    """
     with open(README_PATH, "w", encoding="utf-8") as file:
         file.write(readme_content)
 

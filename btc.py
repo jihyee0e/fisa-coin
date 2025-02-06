@@ -41,6 +41,9 @@ def get_crypto_price():
     else:
         return None
 
+from datetime import datetime
+import pytz  # 이 부분만 추가
+
 def update_readme(price_info):
     """README.md 파일을 업데이트"""
     if price_info is None:
@@ -63,10 +66,14 @@ def update_readme(price_info):
             f"- 24시간 거래량: {volume_24h} BTC"
         )
     
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # UTC 시간으로 설정
+    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # README 내용 작성
     readme_content = f"""
 # Crypto Price Status
 이 리포지토리는 ccdata.io API를 사용하여 비트코인(BTC)의 가격 정보를 자동으로 업데이트합니다.
+
 ## 현재 비트코인 가격
 > {crypto_info}
 
@@ -75,8 +82,12 @@ def update_readme(price_info):
 ---
 자동 업데이트 봇에 의해 관리됩니다.
 """
+    
+    # README 파일 업데이트
     with open(README_PATH, "w", encoding="utf-8") as file:
         file.write(readme_content)
+
+
 
 if __name__ == "__main__":
     while True:

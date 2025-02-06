@@ -4,6 +4,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 import os
 import matplotlib.pyplot as plt
+
 # .env 파일에서 환경 변수 로드
 load_dotenv()
 API_KEY = os.getenv("CCDATA_API_KEY")

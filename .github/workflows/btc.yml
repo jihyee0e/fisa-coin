@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: OpenWeather API로 실시간 코인 정보 업데이트
+      - name: OpenAPI로 실시간 코인 정보 업데이트
         run: |
           pip install requests python-dotenv
-          python update_weather.py
+          python btc.py
         env:
           OPENWEATHER_API_KEY: ${{ secrets.CCDATA_API_KEY }}
 

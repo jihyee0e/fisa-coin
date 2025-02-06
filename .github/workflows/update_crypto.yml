@@ -1,7 +1,7 @@
 name: Update Crypto Prices in README
 on:
   schedule:
-    - cron: "* * * * *"  # 매 1분마다 실행
+  #   - cron: "* * * * *"  # 매 1분마다 실행
   workflow_dispatch:  # 수동 실행 가능
 jobs:
   update-readme:

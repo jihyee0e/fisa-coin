@@ -1,5 +1,5 @@
 # .github/workflows/update_weather.yml
-name: Update Weather in README
+name: btc in README
 
 on:
   schedule:
@@ -23,7 +23,7 @@ jobs:
           pip install requests python-dotenv
           python update_weather.py
         env:
-          OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          OPENWEATHER_API_KEY: ${{ secrets.CCDATA_API_KEY }}
 
       - name: 변경 사항 커밋 및 푸시
         run: |

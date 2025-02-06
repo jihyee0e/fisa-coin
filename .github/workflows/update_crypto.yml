@@ -15,7 +15,7 @@ jobs:
           python-version: "3.11"
       - name: ccdata.io API로 비트코인 가격 업데이트
         run: |
-          pip install requests python-dotenv
+          pip install requests python-dotenv matplotlib
           python btc.py
         env:
           CCDATA_API_KEY: ${{ secrets.CCDATA_API_KEY }}

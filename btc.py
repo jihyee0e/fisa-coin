@@ -74,7 +74,7 @@ def update_readme(price_info):
 
 ## 현재 비트코인 가격
 > {crypto_info}
-
+<br>
 ⏳업데이트 시간: {now} (UTC)
 
 ---

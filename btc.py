@@ -60,7 +60,7 @@ def update_readme(price_info):
             f"- 24시간 최고가: ${high_price}\n"
             f"- 24시간 최저가: ${low_price}\n"
             f"- 24시간 변화량: ${change_24h} ({change_percentage}%)\n"
-            f"- 24시간 거래량: {volume_24h} BTC"
+            f"- 24시간 거래량: {volume_24h} BTC\n"
         )
     
     # UTC 시간으로 설정
@@ -74,7 +74,6 @@ def update_readme(price_info):
 
 ## 현재 비트코인 가격
 > {crypto_info}
-<br>
 ⏳업데이트 시간: {now} (UTC)
 
 ---

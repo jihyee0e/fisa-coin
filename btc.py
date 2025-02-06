@@ -55,12 +55,12 @@ def update_readme(price_info):
         volume_24h = price_info["volume_24h"]
 
         crypto_info = (
-            f"BTC/USD 현재 가격: ${current_price}\n"
-            f"- 시가: ${open_price}\n"
-            f"- 24시간 최고가: ${high_price}\n"
-            f"- 24시간 최저가: ${low_price}\n"
-            f"- 24시간 변화량: ${change_24h} ({change_percentage}%)\n"
-            f"- 24시간 거래량: {volume_24h} BTC\n"
+            f"BTC/USD 현재 가격: ${current_price}<br>"
+            f"- 시가: ${open_price}<br>"
+            f"- 24시간 최고가: ${high_price}<br>"
+            f"- 24시간 최저가: ${low_price}<br>"
+            f"- 24시간 변화량: ${change_24h} ({change_percentage}%)<br>"
+            f"- 24시간 거래량: {volume_24h} BTC<br>"
         )
     
     # UTC 시간으로 설정

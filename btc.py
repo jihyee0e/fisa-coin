@@ -41,9 +41,6 @@ def get_crypto_price():
     else:
         return None
 
-from datetime import datetime
-import pytz  # 이 부분만 추가
-
 def update_readme(price_info):
     """README.md 파일을 업데이트"""
     if price_info is None:
@@ -77,7 +74,8 @@ def update_readme(price_info):
 ## 현재 비트코인 가격
 > {crypto_info}
 
-⏳ 업데이트 시간: {now} (UTC)
+⏳
+업데이트 시간: {now} (UTC)
 
 ---
 자동 업데이트 봇에 의해 관리됩니다.
@@ -86,7 +84,6 @@ def update_readme(price_info):
     # README 파일 업데이트
     with open(README_PATH, "w", encoding="utf-8") as file:
         file.write(readme_content)
-
 
 
 if __name__ == "__main__":
